@@ -6,12 +6,13 @@
  */
 
 // =============节流==========================
-function throttle(fn,wait){
+
+function throttle(fn,delay){
     let prev = new Date();
     return function(){
         const args = arguments;
         const now = new Date();
-        if(now - prev > wait){
+        if(now - prev > delay){
             fn.apply(this,args);
             prev = new Date();
         }
@@ -21,6 +22,7 @@ function throttle(fn,wait){
 
 
 // =============防抖、节流结合==========================
+
 // const throttle = function(fn,delay,isDebounce){
 // //   let timer;
 // //   let lastCall = 0;
