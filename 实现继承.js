@@ -55,19 +55,20 @@ console.log("cat1当前种类：" + cat1.species);
 //下一步一定要为新的prototype对象加上constructor属性，并将属性指回原来的构造函数：
 //o.prototype.constructor = o;
 
+
 //*********【3】直接继承prototype*****************************************
 //现有“动物”构造函数
-function Animal(){
-    Animal.prototype.species = "动物";
-}
+function Animal(){};
+Animal.prototype.species = "动物";
 function Cat(name,color){
     this.name  = name;
     this.color = color;
 }
 Cat.prototype = Animal.prototype;
-Cat.prototype.constructor = Cat; //这样写将Animal.prototype对象的constructor属性也更改Wie了Cat
+Cat.prototype.constructor = Cat; //这样写将Animal.prototype对象的constructor属性也更改为了Cat
 var cat1 = new Cat("毛毛","黑色");
 console.log("cat1当前种类：" + cat1.species);
+
 
 //*********【4】利用空对象作为中介******************************************
 //设现有“动物”构造函数
@@ -78,10 +79,10 @@ function Cat(name,color){
     this.name  = name;
     this.color = color;
 }
-var F = function(){};
-F.prototype = Animal.prototype;
-Cat.prototype = new F();
-Cat.prototype.constructor = Cat;
+// var F = function(){};
+// F.prototype = Animal.prototype;
+// Cat.prototype = new F();
+// Cat.prototype.constructor = Cat;
 //封装成函数
 function extend(Child,Parent){
     var F = function(){};
@@ -99,9 +100,8 @@ console.log("cat1当前种类：" + cat1.species);
 
 //*********【5】拷贝继承*******************************************
 //现有“动物”构造函数
-function Animal(){
-    Animal.prototype.species = "动物";
-}
+function Animal(){}
+Animal.prototype.species = "动物";
 function Cat(name,color){
     this.name  = name;
     this.color = color;
@@ -168,6 +168,7 @@ Doctor.birthPlaces.push('厦门');
 console.log(Doctor.birthPlaces); //北京，上海，香港，厦门
 console.log(Chinese.birthPlaces); //北京，上海，香港，厦门
 // extendCopy() 只是拷贝基本数据类型 → 浅拷贝
+
 
 // *********【3】深拷贝方法******************************************
 // 阮老师原话：
