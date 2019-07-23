@@ -6,6 +6,8 @@
  */
 
 // instanceof运算符用于测试构造函数的prototype属性是否出现在对象的原型链中的任何位置
+// __proto__:隐式原型
+// prototype:显示原型
 
 function instanceOf(left,right){
     let proto  = left.__proto__;
