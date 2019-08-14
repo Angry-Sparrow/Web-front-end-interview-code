@@ -11,11 +11,6 @@ function Parent(name){
 Parent.prototype.sayName  = function(){
     console.log('parent name : ' ,this.name);
 };
-function Child(name,parentName){
-    Parent.call(this.parentName);
-    this.name = name;
-}
-// 空的中间函数
 function create(proto){
     function F(){}
     F.prototype = proto;
@@ -33,3 +28,4 @@ var parent = new Parent('father');
 parent.sayName();  // parent name :  father
 var child = new Child('son','father');
 child.sayName();   // parent name :  son
+

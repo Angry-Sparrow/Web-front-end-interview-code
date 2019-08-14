@@ -5,7 +5,7 @@
  * @Last Modified time:2019/7/22 21:40
  */
 
-// =============节流==========================
+// =============节流[时间戳]==========================
 
 function throttle(fn,delay){
     let prev = new Date();
@@ -18,6 +18,26 @@ function throttle(fn,delay){
         }
     }
 }
+
+// =============节流[定时器]==========================
+
+// var throttle = function(func,delay){
+//     var timer = null;
+//     return function(){
+//         var context = this;
+//         var args = arguments;
+//         if(!timer){
+//             timer = setTimeout(function(){
+//                     func.apply(context,args);
+//                     timer = null;
+//             }, delay);
+//         }
+//     }
+// };
+// function handle(){
+//     console.log(Math.random());
+// }
+// window.addEventListener('scroll',throttle(handle,1000));
 
 
 
