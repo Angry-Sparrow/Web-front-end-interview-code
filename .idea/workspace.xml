@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="70eb2b38-0ae7-4f9e-8eb9-57efefc1d05e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/a_test.html" beforeDir="false" afterPath="$PROJECT_DIR$/a_test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/冒泡排序.js" beforeDir="false" afterPath="$PROJECT_DIR$/排序-冒泡排序.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/堆排序.js" beforeDir="false" afterPath="$PROJECT_DIR$/排序-堆排序.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/希尔排序.js" beforeDir="false" afterPath="$PROJECT_DIR$/排序-希尔排序.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/归并排序.js" beforeDir="false" afterPath="$PROJECT_DIR$/排序-归并排序.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/快速排序.js" beforeDir="false" afterPath="$PROJECT_DIR$/排序-快速排序.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/插入排序.js" beforeDir="false" afterPath="$PROJECT_DIR$/排序-插入排序.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/百度面试.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/选择排序.js" beforeDir="false" afterPath="$PROJECT_DIR$/排序-选择排序.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +14,7 @@
     <session id="1413821781">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.40" value="1" />
@@ -34,7 +26,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="6" />
+          <entry key="html" value="7" />
           <entry key="js" value="59" />
           <entry key="md" value="1" />
           <entry key="ts" value="1" />
@@ -42,7 +34,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="6" />
+          <entry key="HTML" value="7" />
           <entry key="JavaScript" value="59" />
           <entry key="Markdown" value="1" />
           <entry key="TypeScript" value="1" />
@@ -50,13 +42,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="635" />
+          <entry key="html" value="47636" />
           <entry key="js" value="20530" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="635" />
+          <entry key="HTML" value="47636" />
           <entry key="JavaScript" value="20530" />
         </counts>
       </usages-collector>
@@ -64,11 +56,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/a_test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+            <state relative-caret-position="247">
+              <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RouterDemo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="17" column="43" lean-forward="true" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -196,6 +197,7 @@
         <option value="$PROJECT_DIR$/左侧定宽右侧自适应布局.html" />
         <option value="$PROJECT_DIR$/布局-左侧定宽右侧自适应布局.html" />
         <option value="$PROJECT_DIR$/a_test.html" />
+        <option value="$PROJECT_DIR$/RouterDemo.html" />
       </list>
     </option>
   </component>
@@ -206,10 +208,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="755" />
-    <option name="y" value="80" />
-    <option name="width" value="1175" />
-    <option name="height" value="1006" />
+    <option name="x" value="456" />
+    <option name="y" value="62" />
+    <option name="width" value="1251" />
+    <option name="height" value="1028" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -236,8 +238,8 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565751827276" />
-    <property name="last_opened_file_path" value="E:/实例/practice1/lees-mall" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565858579811" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../h5-game-plantsVSzombies-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -324,18 +326,18 @@
       <workItem from="1564313265399" duration="17094000" />
       <workItem from="1564907260488" duration="39305000" />
       <workItem from="1565510998669" duration="604000" />
-      <workItem from="1565534453483" duration="8202000" />
+      <workItem from="1565534453483" duration="18484000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147876000" />
+    <option name="totallyTimeSpent" value="158158000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="755" y="80" width="1175" height="1006" extended-state="0" />
+    <frame x="456" y="62" width="1251" height="1028" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22690582" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1427372" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -344,7 +346,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29931194" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29194632" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.40252292" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -665,8 +667,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/a_test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        <state relative-caret-position="247">
+          <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RouterDemo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="43" lean-forward="true" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
         </state>
       </provider>
     </entry>

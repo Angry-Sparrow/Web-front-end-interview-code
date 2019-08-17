@@ -1,0 +1,57 @@
+<!--/*-->
+<!--* @Author: lee-->
+<!--* @Date:2019/8/15 11:12-->
+<!--* @Last Modified by:lee-->
+<!--* @Last Modified time:2019/8/15 11:12-->
+<!--*/-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hash router</title>
+</head>
+<body>
+<ul>
+    <li><a href="#/">turn yellow</a></li>
+    <li><a href="#/blue">turn blue</a></li>
+    <li><a href="#/green">turn green</a></li>
+</ul>
+<script>
+    // 路由类
+    class Routers{
+        constructor(){
+            this.routes = {};
+            this.currentUrl = '';
+            this.refresh = this.refresh.bind(this);
+            window.addEventListener('load',this.refresh,false);
+            window.addEventListener('hashchange',this.refresh,false);
+        }
+        route(path,callback){
+            this.routes[path] = callback || function(){};
+        }
+        refresh(){
+            this.currentUrl = location.hash.slice(1) || '/';
+            this.routes[this.currentUrl]();
+        }
+    }
+    window.Router = new Routers();
+    var content = document.querySelector('body');
+    function changeBgColor(color){
+        content.style.backgroundColor = color;
+    }
+    // 如果是"/" ，对应黄色
+    Router.route('/',function(){
+        changeBgColor('yellow');
+    });
+    Router.route('/blue',function(){
+        changeBgColor('blue');
+    });
+    Router.route('/green',function(){
+        changeBgColor('green');
+    });
+
+</script>
+</body>
+</html>
