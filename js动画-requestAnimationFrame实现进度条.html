@@ -1,0 +1,56 @@
+<!--/*-->
+<!--* @Author: lee-->
+<!--* @Date:2019/8/22 21:05-->
+<!--* @Last Modified by:lee-->
+<!--* @Last Modified time:2019/8/22 21:05-->
+<!--*/-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="beqan2016@163.com">
+    <meta name="description" content="
+        1：使用系统时间间隔
+        2：使用一个回调函e数，回调函数在浏览器重绘之前调用
+        3：requestAnimationFrame将一帧中所有的DOM操作集中起来，在一次重绘或者回流中完成
+            且重绘和回流时间和浏览器刷新频率有关。
+        4：在隐藏或不可见的元素中，requestAnimationFrame将不会进行重绘或者回流，节省CPU、GPU、内存使用量
+        5：requestAnimationFrame是由浏览器专门为动画提供的API，在运行时浏览器会自动优化方法的调用
+            如果页面不在激活状态下，动画会自动暂停，有效节省了CPU开销
+    ">
+    <title>requestAnimationFrame实现进度条</title>
+    <style>
+        #myDiv{
+            background-color:lightblue;
+            width:0;
+            height:20px;
+            line-height:20px;
+        }
+        #btn{
+            width:40px;
+            height:30px;
+            border:1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv">0%</div>
+    <button id="btn">run</button>
+</body>
+<script>
+    var timer;
+    btn.onclick = function(){
+        cancelAnimationFrame(timer);
+        myDiv.style.width = '0';
+        timer = requestAnimationFrame(function fn(){
+            if(parseInt(myDiv.style.width) < 500){
+                myDiv.style.width = parseInt(myDiv.style.width) + 5 + 'px';
+                myDiv.innerHTML = parseInt(myDiv.style.width)/5 + '%';
+                timer = requestAnimationFrame(fn);
+            }else{
+                cancelAnimationFrame(timer);
+            }
+        })
+    }
+</script>
+</html>

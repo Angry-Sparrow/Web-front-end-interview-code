@@ -1,0 +1,106 @@
+<!--/*-->
+<!--* @Author: lee-->
+<!--* @Date:2019/8/21 14:00-->
+<!--* @Last Modified by:lee-->
+<!--* @Last Modified time:2019/8/21 14:00-->
+<!--*/-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nav-head</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .head-nav{
+            width:1200px;
+            margin:0 auto;
+            background:#373D41;
+        }
+        .head-nav ul{
+            list-style:none;
+            font-size:0px;
+            position:relative;
+        }
+        .head-nav li{
+            line-height:70px;
+            padding:0 12px;
+            display:inline-block;
+        }
+        .head-nav li a{
+            color:#fff;
+            font-size:16px;
+            text-decoration:none;
+            display:block;
+            cursor:pointer;
+        }
+        .head-nav li a:hover{
+            color:#ccc;
+        }
+        .head-nav li.line{
+            position:absolute;
+            width:0px;
+            height:2px;
+            background:#ccc;
+            left:12px;
+            bottom:10px;
+            padding:0;
+        }
+    </style>
+</head>
+<body>
+<div class="head-nav">
+    <ul>
+        <li><a href="#">最新活动</a></li>
+        <li><a href="#">产品</a></li>
+        <li><a href="#">产品水电费</a></li>
+        <li><a href="#">产品水电</a></li>
+        <li><a href="#">产品</a></li>
+        <li class="line"></li>
+    </ul>
+</div>
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
+<script>
+    // 原生实现方式 使用了jQuery animate函数方式实现
+    (function($,win){
+
+        //获取当前元素的偏移量
+        function getElementLeft(element){
+            var el = typeof(element) === "string" ? document.getElementById(element) : element;
+            return el.offsetLeft;
+        }
+
+        var li = document.getElementsByTagName("li");
+        var line = document.getElementsByClassName("line");
+
+        for(var i=0; i<li.length; i++){
+            (function(i){
+                li[i].addEventListener("mouseenter",function(){
+                    var offsetLeft = getElementLeft(this);
+
+                    $(line[0]).stop().animate({
+                        left:offsetLeft+"px",
+                        width:li[i].offsetWidth + "px"
+                    },50)
+                    // line[0].style.left = offsetLeft+"px";
+                    // line[0].style.width = li[i].offsetWidth + "px";
+                });
+
+                li[i].addEventListener("mouseleave",function(){
+                    var offsetLeft = getElementLeft(this);
+                    $(line[0]).stop().animate({
+                        left:offsetLeft+"px",
+                        width:"0px"
+                    },280)
+                    // line[0].style.left = offsetLeft+"px";
+                    // line[0].style.width = "0px";
+                });
+            }(i))
+        }
+    })(jQuery,window)
+
+</script>
+</body>
+</html>

@@ -1,19 +1,44 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="description" content="此脚本是用来平时做演练使用，不要参考哟。"/>
-    <title>Lee's 前端</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p {
+            width:60px;
+            display:block;
+            overflow: hidden;
+
+            white-space: nowrap;
+
+            text-overflow: ellipsis;
+
+        }
+    </style>
 </head>
-<style>
-#demo{
-
-}
-
-</style>
 <body>
-<div id="demo">
-</div>
+<p>fdfsfsdsdfsfsfsffdsfsdfsdfsfsadfasff哈哈哈范德萨发生的肌肤很快很快就会感官方都给电饭锅电饭锅蛋糕的觉卡回归   官方广告电饭锅电饭锅蛋糕的身份感到十分广泛啥地方广东省 官方给电饭锅电饭锅电饭锅电饭锅的事 dasdfss</p>
+<script>
+    $(function() {
+        /*处理label显示问题，超出宽度，裁剪，并省略号，其他组件文字显示问题一样*/
+        $("label") .each(function(){
+            var labelval=  $(this).text() ;
+            if(labelval.length>3){
+                $(this).text(labelval.substring(0,3)+"...");
+            }
+        });
+
+        /*处理表格显示问题，超出宽度，裁剪，并省略号*/
+        var td_length=$('.table td').length;
+        for(var n=0;n<td_length;n++){
+            var tdContent = $('.table td:eq('+n+')').html();
+            if(tdContent.length>20){
+                tdContent = tdContent.substring(0,20)+"...";
+                $('.table td:eq('+n+')').html(tdContent);
+            }
+
+        }
+    });
+</script>
 </body>
 </html>

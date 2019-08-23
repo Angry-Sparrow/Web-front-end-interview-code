@@ -1,0 +1,45 @@
+<!--/*-->
+<!--* @Author: lee-->
+<!--* @Date:2019/8/22 20:12-->
+<!--* @Last Modified by:lee-->
+<!--* @Last Modified time:2019/8/22 20:12-->
+<!--*/-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>setInterval实现进度条</title>
+    <style>
+        #myDiv{
+            background-color:lightblue;
+            width:0;
+            height:20px;
+            line-height:20px;
+        }
+        #btn{
+            width:40px;
+            height:30px;
+            border:1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv">0%</div>
+    <button id="btn">run</button>
+</body>
+<script>
+    var timer;
+    btn.onclick = function(){
+        clearInterval(timer);
+        myDiv.style.width='0';
+        timer = setInterval(function(){
+            if(parseInt(myDiv.style.width) < 500){
+                myDiv.style.width = parseInt(myDiv.style.width) + 5 + 'px';
+                myDiv.innerHTML = parseInt(myDiv.style.width)/5 + '%';
+            }else{
+                clearInterval(timer);
+            }
+        },1000);
+    }
+</script>
+</html>

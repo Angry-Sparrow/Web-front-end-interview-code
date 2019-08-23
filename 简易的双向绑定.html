@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>简易的数据双向绑定</title>
+ <meta charset="utf-8">
+ <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+</head>
+<body>
+<div>
+ <input type="text" id="model">
+</div>
+<div id="modelText"></div>
+<script>
+    var user={
+        name : 'Tom',
+        txt  : '你好',
+    };
+    // var defaultName = 'Tom';
+    var input = document.querySelector('#model');
+    var text = document.querySelector("#modelText");
+
+    input.value = user.name;
+    text.textContent = user.name;
+    // model > view
+    Object.defineProperty(user,"name",{
+        get:function(){
+            console.log("获取user");
+        },
+        set:function(val){
+            console.log("修改user");
+            input.value = val;
+            text.textContent = val;
+        }
+    })
+
+    // view > model
+    input.addEventListener('input',function(val){
+        user.name = input.value;
+    })
+</script>
+</body>
+
+</html>
